@@ -1,5 +1,5 @@
 <nav
-  class="navbar navbar-expand navbar-dark bg-dark"
+  class="navbar navbar-expandx navbar-dark bg-dark"
   aria-label="Second navbar example"
 >
   <div class="container-fluid">
@@ -7,6 +7,7 @@
     <button
       class="navbar-toggler"
       type="button"
+      (click)="toggleMenu(menu)"
       data-bs-toggle="collapse"
       data-bs-target="#navbarsExample02"
       aria-controls="navbarsExample02"
@@ -16,10 +17,16 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExample02">
+    <div #menu class="collapse navbar-collapse" id="navbarsExample02">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" routerLink="home">Home</a>
+          <a
+            class="nav-link"
+            aria-current="page"
+            routerLink="home"
+            routerLinkActive="active"
+            >Home</a
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="movies" routerLinkActive="active"
